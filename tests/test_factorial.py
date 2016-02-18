@@ -1,6 +1,10 @@
 import unittest
 import math
 import random
+
+#TODO: Running the command line unittest on this script
+# doesn't work in 2.7. This import line could likely be
+# main suspect.
 from src import factorial
 
 class TestFactorial(unittest.TestCase):
