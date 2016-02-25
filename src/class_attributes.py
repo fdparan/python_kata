@@ -25,7 +25,20 @@ class ChildFoo(Foo):
     def __init__(self):
         super().__init__('Child Foo')
 
-if __name__ == "__main__":
+class my_class:
+    cls_attr = "foo"
+    cls_lst = []
+
+    def __init__(self, name, value):
+        self.name = name
+        self.value = value
+
+class sub_class(my_class):
+    def __init__(self, name, value):
+        self.marco = "Polo"
+        super().__init__(name, value)
+
+def foo_example():
     obj = Foo('bar')
     print(obj)
 
@@ -36,3 +49,15 @@ if __name__ == "__main__":
     print(obj.value)
 
     print(obj.__dict__)
+
+if __name__ == "__main__":
+    my_cls_obj = my_class('spam', 'a lot')
+
+    monty = sub_class("Python", "The Holy Grail")
+    print(my_class.__dict__.keys())
+    print(my_cls_obj.__dict__.keys())
+
+    print(sub_class.__base__.__dict__.keys())
+    print(monty.cls_attr)
+    
+    foo_example()

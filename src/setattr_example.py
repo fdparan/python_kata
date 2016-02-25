@@ -30,3 +30,6 @@ if __name__ == "__main__":
     print(obj2.class_var)
 
     Foo.class_var = 'foo'
+
+    print(obj.class_var)
+    print(obj2.class_var)
